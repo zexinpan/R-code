@@ -1,5 +1,4 @@
-# Test code for "Dimension-independent convergence rates 
-# of randomized nets using median-of-means"
+# Test code for "Dimension-independent convergence rates of randomized nets using median-of-means"
 
 source('auxiliary functions.R')
 col = read.table('sobol_Cs.col') # load Sobol' sequence
@@ -82,4 +81,5 @@ lm(y~x)
 plot(x,y,ylim=c(-50,0),type="b",xlab="m",ylab="Log2 ABS")
 abline(a=0,b=-1)
 abline(a=0,b=-1.5)
+
 abline(a=0,b=-2)
