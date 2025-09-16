@@ -2,7 +2,7 @@
 # Paper available at https://arxiv.org/abs/2505.13815
 
 source('auxiliary functions.R')
-col = read.table('sobol_Cs.col') # load Sobol' sequence. Generating numbers from Joe, S., & Kuo, F. Y. (2008). Constructing Sobol sequences with better two-dimensional projections. SIAM Journal on Scientific Computing, 30(5), 2635-2654.
+col = read.table('sobol_Cs.col') # load Sobol' sequence from https://people.cs.kuleuven.be/~dirk.nuyens/qmc-generators/
 
 # Set up the test function used in the paper
 gamma=2 # decay rate of relative norm
@@ -83,3 +83,4 @@ plot(x,y,ylim=c(-50,0),type="b",xlab="m",ylab="Log2 ABS")
 abline(a=0,b=-1)
 abline(a=0,b=-1.5)
 abline(a=0,b=-2)
+
