@@ -19,7 +19,7 @@ f<-function(x){ # input x is n by d
 function_mean=1
 
 d=100 # dimension
-M=8 # test n=2^1,2^2,...,2^M
+M=16 # test n=2^1,2^2,...,2^M
 r=2*10-1 # number of repeats to take median or mean
 precision=64 # number of digits to generate
 
@@ -83,3 +83,4 @@ abline(a=0,b=-1)
 abline(a=0,b=-1.5)
 
 abline(a=0,b=-2)
+
