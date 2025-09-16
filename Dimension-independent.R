@@ -52,9 +52,9 @@ for(m in 1:M){
   errormedian[m]=median(temp)-function_mean # median of scrambled nets
 }
 error=errormean
-save(error,file="STDalpha1gamma2d100.RData")
+save(error,file="STDalpha0gamma2d100.RData")
 error=errormedian
-save(error,file="RLSalpha1gamma2d100.RData")
+save(error,file="RLSalpha0gamma2d100.RData")
 
 # Median QMC with complete random designs
 error=rep(0,M)
@@ -72,7 +72,7 @@ for(m in 1:M){
   }
   error[m]=median(temp)-function_mean
 }
-save(error,file="CRDalpha1gamma2d100.RData")
+save(error,file="CRDalpha0gamma2d100.RData")
 
 # Plotting
 y=log(abs(error),2)
@@ -81,6 +81,6 @@ lm(y~x)
 plot(x,y,ylim=c(-50,0),type="b",xlab="m",ylab="Log2 ABS")
 abline(a=0,b=-1)
 abline(a=0,b=-1.5)
-
 abline(a=0,b=-2)
+
 
