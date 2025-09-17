@@ -32,13 +32,13 @@ d=5 # dimension
 M=18 # test n=2^1,2^2,...,2^M
 nexpr=30 # repeat 30 times to estimate the variance
 precision=32 # number of digits to generate
+
+# Set up QMC integrator
 C = array(0,c(M,M,d)) 
 for( j in 1:d ){
   for( k in 1:M )
     C[,k,j] = .rsobol.int2bits(col[j,k],M) # load generating matrices
 }
-
-# Set up QMC integrator
 QMCerror<-function(expr="which_experiment"){
   error=matrix(nrow=nexpr,ncol=M)
   for(m in 1:M){
@@ -82,7 +82,7 @@ QMCerror<-function(expr="which_experiment"){
   return(error)
 }
 
-# Boundary-damping Improtance sampling
+# Boundary-damping improtance sampling
 theta=0.1/(1:d)^2 # set theta parameters
 transf<-function(x,theta){ # transport map T(u)
   if(x>1/2) u=1-x else u=x
