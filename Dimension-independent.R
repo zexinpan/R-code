@@ -19,6 +19,7 @@ f<-function(x){ # input x is n by d
 }
 function_mean=1
 
+# Set up experiment parameters
 d=100 # dimension
 M=16 # test n=2^1,2^2,...,2^M
 r=2*10-1 # number of repeats to take median or mean
@@ -83,4 +84,5 @@ plot(x,y,ylim=c(-50,0),type="b",xlab="m",ylab="Log2 ABS")
 abline(a=0,b=-1)
 abline(a=0,b=-1.5)
 abline(a=0,b=-2)
+
 
